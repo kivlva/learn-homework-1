@@ -16,7 +16,12 @@ def get_summ(num_one, num_two):
     """
     Замените pass на ваш код
     """
-    pass
+    
+    try:
+        result = int(num_one) + int(num_two)
+        return (result)
+    except ValueError:
+        return ("Следует вводить целочисленные значения!")
     
 if __name__ == "__main__":
     print(get_summ(2, 2))

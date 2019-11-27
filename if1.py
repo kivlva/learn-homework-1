@@ -19,7 +19,27 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+
+    def actual_activity(age):
+        if age < 0:
+            return "Возраст не может быть отрицательной величиной!"
+        elif age < 7:
+            return "Вам следует ходить в детский сад"
+        elif age < 17:
+            return "Вам следует учиться в школе"
+        elif age < 23:
+            return "Вам следует хотить в ВУЗ"
+        elif age < 65:
+            return "Вам следует работать"
+        elif age < 100:
+            return "Вам следует отдыхать на пенсии"
+        else:
+            return "Обычно столько не живут, поздравляю!" 
+
+
+    age = float(input("Каков ваш возраст? "))
+    activity = actual_activity(age)
+    print(activity)
 
 if __name__ == "__main__":
     main()
