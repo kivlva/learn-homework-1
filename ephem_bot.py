@@ -54,9 +54,7 @@ def get_const(planet):
     try:
         planet_object = planets[planet]
         const = ephem.constellation(planet_object)
-#        output_text = const
         output_text = "Планета {plnt} сегодня находится в созвездии {cnst}".format(plnt=planet,cnst=const)
- #       print('Средний балл по классу {school_class}: {score}'.format(school_class=current_class["school_class"], score=current_class['avg_score']))
     except KeyError:
         output_text = "Попробуйте ввести название планеты на английском с большой буквы"
     return(output_text)
